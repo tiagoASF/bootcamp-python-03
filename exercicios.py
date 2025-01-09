@@ -81,15 +81,39 @@
 # EXERCICIO 05
 # Uma transação é considerada suspeita se o valor for superior a R$ 10.000 ou se ocorrer fora do horário comercial (antes das 9h ou depois das 18h). Dada uma transação como transacao = {'valor': 12000, 'hora': 20}, verifique se ela é suspeita.
 
-transacao = {'valor': 12000, 'hora': 20}
-transacao_suspeita = 0
+# transacao = {'valor': 12000, 'hora': 20}
+# transacao_suspeita = 0
 
-if transacao['valor'] > 10000:
-    print("Valor suspeito.")
-    transacao_suspeita = 1
-elif transacao['hora'] > 18 or transacao['hora'] < 9:
-    print("Horário suspeito.")
-    transacao_suspeita = 1
+# if transacao['valor'] > 10000:
+#     print("Valor suspeito.")
+#     transacao_suspeita = 1
+# elif transacao['hora'] > 18 or transacao['hora'] < 9:
+#     print("Horário suspeito.")
+#     transacao_suspeita = 1
 
-if not transacao_suspeita:
-    print("Transação regular.")
+# if not transacao_suspeita:
+#     print("Transação regular.")
+
+# EXERCICIO 06
+# Dado um texto, contar quantas vezes cada palavra única aparece nele.
+
+import re
+
+texto = "A raposa marrom, salta sobre o cachorro marrom preguiçoso. Mas o rato roeu a roupa do rei de Roma - exceto as meias."
+palavras = texto.lower().split(" ")
+palavras_selecionadas = []
+palavras_unicas = {}
+
+for palavra in palavras:
+    palavra = re.sub(r'[.,!?-_]', "", palavra)
+    if len(palavra) > 1:
+        palavras_selecionadas.append(palavra)
+
+for palavra in palavras_selecionadas:
+    if palavra in palavras_unicas:
+        palavras_unicas[palavra] += 1
+    else:
+        palavras_unicas[palavra] = 1
+
+print(texto)
+print(palavras_unicas)
