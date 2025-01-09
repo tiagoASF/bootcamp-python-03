@@ -68,12 +68,28 @@
 # EXERCICIO 04
 # você precisa garantir que cada usuário tenha idade entre 18 e 65 anos e tenha fornecido um email válido. Escreva um programa que valide essas condições e imprima "Dados de usuário válidos" ou o erro específico encontrado.
 
-idade = int(input("Idade: "))
-email = input("E-mail: ").strip().lower()
+# idade = int(input("Idade: "))
+# email = input("E-mail: ").strip().lower()
 
-if idade < 18 or idade > 65:
-    print("Faixa etária não admitida")
-elif "@" not in email or "." not in email:
-    print("E-mail inválido")
-else:
-    print("Dados válidos!")
+# if idade < 18 or idade > 65:
+#     print("Faixa etária não admitida")
+# elif "@" not in email or "." not in email:
+#     print("E-mail inválido")
+# else:
+#     print("Dados válidos!")
+
+# EXERCICIO 05
+# Uma transação é considerada suspeita se o valor for superior a R$ 10.000 ou se ocorrer fora do horário comercial (antes das 9h ou depois das 18h). Dada uma transação como transacao = {'valor': 12000, 'hora': 20}, verifique se ela é suspeita.
+
+transacao = {'valor': 12000, 'hora': 20}
+transacao_suspeita = 0
+
+if transacao['valor'] > 10000:
+    print("Valor suspeito.")
+    transacao_suspeita = 1
+elif transacao['hora'] > 18 or transacao['hora'] < 9:
+    print("Horário suspeito.")
+    transacao_suspeita = 1
+
+if not transacao_suspeita:
+    print("Transação regular.")
