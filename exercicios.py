@@ -224,11 +224,27 @@ Objetivo: Ler dados de entrada até que uma palavra-chave específica ("sair") s
 Objetivo: Solicitar ao usuário um número dentro de um intervalo específico até que a entrada seja válida.
 
 '''
-numero_entrada = int(input("Informe um número: "))
+# numero_entrada = int(input("Informe um número: "))
 
-while numero_entrada >  10 or numero_entrada < 0:
-    print("Número fora do intervalo válido. Tente novamente.")
-    numero_entrada = int(input("Informe novamente um número: "))
+# while numero_entrada >  10 or numero_entrada < 0:
+#     print("Número fora do intervalo válido. Tente novamente.")
+#     numero_entrada = int(input("Informe novamente um número: "))
 
-print("Parabéns, você acertou.")
-    
+# print("Parabéns, você acertou.")
+
+''' EXERCICIO 13 - Consumo de API Simulado
+
+Objetivo: Simular o consumo de uma API paginada, onde cada "página" de dados é processada em loop até que não haja mais páginas.
+
+'''   
+import time 
+
+pagina_atual = 1
+paginas_totais = 6
+
+while pagina_atual <= paginas_totais:
+    print(f"Processando página {pagina_atual}...")
+    time.sleep(3)
+    pagina_atual += 1
+
+print("Fim do processamento")
