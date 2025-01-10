@@ -140,20 +140,30 @@
 Dada uma lista de dicionários representando dados de usuários, filtrar aqueles que têm um campo específico faltando.
 '''
 
-usuarios = [
-    {"nome": "Alice", "email": "alice@example.com"},
-    {"nome": "Bob", "email": ""},
-    {"nome": "Carol", "email": "carol@example.com"}
-]
+# usuarios = [
+#     {"nome": "Alice", "email": "alice@example.com"},
+#     {"nome": "Bob", "email": ""},
+#     {"nome": "Carol", "email": "carol@example.com"}
+# ]
 
-# usuarios_validos = []
+# # usuarios_validos = []
 
-# for usuario in usuarios:
-#     if usuario['email']:
-#         usuarios_validos.append(usuario)
+# # for usuario in usuarios:
+# #     if usuario['email']:
+# #         usuarios_validos.append(usuario)
 
-usuarios_validos = [usuario for usuario in usuarios if usuario['email']]
+# usuarios_validos = [usuario for usuario in usuarios if usuario['email']]
 
-print(usuarios_validos)
+# print(usuarios_validos)
+
+''' EXERCICIO 09 - Extração de Subconjuntos de Dados
+
+Objetivo: Dada uma lista de números, extrair apenas aqueles que são pares.
+'''
+numeros = range(1, 30)
+
+pares = [numero for numero in numeros if numero % 2 == 0]
+
+print(pares)
 
 
