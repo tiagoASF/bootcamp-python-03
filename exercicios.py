@@ -97,23 +97,40 @@
 # EXERCICIO 06
 # Dado um texto, contar quantas vezes cada palavra única aparece nele.
 
-import re
+# import re
 
-texto = "A raposa marrom, salta sobre o cachorro marrom preguiçoso. Mas o rato roeu a roupa do rei de Roma - exceto as meias."
-palavras = texto.lower().split(" ")
-palavras_selecionadas = []
-palavras_unicas = {}
+# texto = "A raposa marrom, salta sobre o cachorro marrom preguiçoso. Mas o rato roeu a roupa do rei de Roma - exceto as meias."
+# palavras = texto.lower().split(" ")
+# palavras_selecionadas = []
+# palavras_unicas = {}
 
-for palavra in palavras:
-    palavra = re.sub(r'[.,!?-_]', "", palavra)
-    if len(palavra) > 1:
-        palavras_selecionadas.append(palavra)
+# for palavra in palavras:
+#     palavra = re.sub(r'[.,!?-_]', "", palavra)
+#     if len(palavra) > 1:
+#         palavras_selecionadas.append(palavra)
 
-for palavra in palavras_selecionadas:
-    if palavra in palavras_unicas:
-        palavras_unicas[palavra] += 1
-    else:
-        palavras_unicas[palavra] = 1
+# for palavra in palavras_selecionadas:
+#     if palavra in palavras_unicas:
+#         palavras_unicas[palavra] += 1
+#     else:
+#         palavras_unicas[palavra] = 1
 
-print(texto)
-print(palavras_unicas)
+# print(texto)
+# print(palavras_unicas)
+
+# EXERCICIO 07 - Normalizando dados
+# Normalizar uma lista de números para que fiquem na escala de 0 a 1.
+
+numeros = [4, 20, 10, 35, 74, 27, 66]
+numeros_normalizados = []
+
+minimo = min(numeros)
+maximo = max(numeros)
+
+# for numero in numeros:
+#     normalizado = (numero - minimo) / (maximo - minimo)
+#     numeros_normalizados.append(normalizado)
+
+numeros_normalizados = [(numero - minimo) / (maximo - minimo) for numero in numeros]
+
+print(numeros_normalizados)
