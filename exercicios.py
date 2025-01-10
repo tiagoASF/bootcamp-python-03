@@ -160,10 +160,41 @@ Dada uma lista de dicionários representando dados de usuários, filtrar aqueles
 
 Objetivo: Dada uma lista de números, extrair apenas aqueles que são pares.
 '''
-numeros = range(1, 30)
+# numeros = range(1, 30)
 
-pares = [numero for numero in numeros if numero % 2 == 0]
+# pares = [numero for numero in numeros if numero % 2 == 0]
 
-print(pares)
+# print(pares)
+
+''' EXERCICIO 10 - Agregação de Dados por Categoria
+
+Dado um conjunto de registros de vendas, calcular o total de vendas por categoria.
+'''
+
+vendas = [
+    {"categoria": "eletrônicos", "valor": 1200},
+    {"categoria": "livros", "valor": 200},
+    {"categoria": "eletrônicos", "valor": 800},
+    {"categoria": "livros", "valor": 100},
+    {"categoria": "joias", "valor": 2800},
+    {"categoria": "revistas", "valor": 50},
+    {"categoria": "joias", "valor": 2200},
+    {"categoria": "revistas", "valor": 50}
+]
+
+total_vendas = {}
+
+for venda in vendas:
+    categoria = venda['categoria']
+    valor = venda['valor']
+
+    if categoria in total_vendas:
+        total_vendas[categoria] += valor
+    else:
+        total_vendas[categoria] = valor
+
+print(total_vendas)
+
+
 
 
