@@ -121,16 +121,39 @@
 # EXERCICIO 07 - Normalizando dados
 # Normalizar uma lista de números para que fiquem na escala de 0 a 1.
 
-numeros = [4, 20, 10, 35, 74, 27, 66]
-numeros_normalizados = []
+# numeros = [4, 20, 10, 35, 74, 27, 66]
+# numeros_normalizados = []
 
-minimo = min(numeros)
-maximo = max(numeros)
+# minimo = min(numeros)
+# maximo = max(numeros)
 
-# for numero in numeros:
-#     normalizado = (numero - minimo) / (maximo - minimo)
-#     numeros_normalizados.append(normalizado)
+# # for numero in numeros:
+# #     normalizado = (numero - minimo) / (maximo - minimo)
+# #     numeros_normalizados.append(normalizado)
 
-numeros_normalizados = [(numero - minimo) / (maximo - minimo) for numero in numeros]
+# numeros_normalizados = [(numero - minimo) / (maximo - minimo) for numero in numeros]
 
-print(numeros_normalizados)
+# print(numeros_normalizados)
+
+''' EXERCICIO 08 - Filtragem de Dados Faltantes
+
+Dada uma lista de dicionários representando dados de usuários, filtrar aqueles que têm um campo específico faltando.
+'''
+
+usuarios = [
+    {"nome": "Alice", "email": "alice@example.com"},
+    {"nome": "Bob", "email": ""},
+    {"nome": "Carol", "email": "carol@example.com"}
+]
+
+# usuarios_validos = []
+
+# for usuario in usuarios:
+#     if usuario['email']:
+#         usuarios_validos.append(usuario)
+
+usuarios_validos = [usuario for usuario in usuarios if usuario['email']]
+
+print(usuarios_validos)
+
+
