@@ -237,14 +237,31 @@ Objetivo: Solicitar ao usuário um número dentro de um intervalo específico at
 Objetivo: Simular o consumo de uma API paginada, onde cada "página" de dados é processada em loop até que não haja mais páginas.
 
 '''   
-import time 
+# import time 
 
-pagina_atual = 1
-paginas_totais = 6
+# pagina_atual = 1
+# paginas_totais = 6
 
-while pagina_atual <= paginas_totais:
-    print(f"Processando página {pagina_atual}...")
-    time.sleep(3)
-    pagina_atual += 1
+# while pagina_atual <= paginas_totais:
+#     print(f"Processando página {pagina_atual}...")
+#     time.sleep(3)
+#     pagina_atual += 1
 
-print("Fim do processamento")
+# print("Fim do processamento")
+
+''' EXERCICIO 14 - Tentativas de Conexão
+
+Objetivo: Simular tentativas de reconexão a um serviço com um limite máximo de tentativas.
+
+'''
+import time
+
+tentativa = 1
+LIMITE_TENTATIVAS = 10
+
+while tentativa <= LIMITE_TENTATIVAS:
+    print(f"Tentativa {tentativa}...")
+    tentativa += 1
+    time.sleep(2)
+
+print("Máximo de tentativas atigido")
