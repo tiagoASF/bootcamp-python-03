@@ -171,30 +171,50 @@ Objetivo: Dada uma lista de números, extrair apenas aqueles que são pares.
 Dado um conjunto de registros de vendas, calcular o total de vendas por categoria.
 '''
 
-vendas = [
-    {"categoria": "eletrônicos", "valor": 1200},
-    {"categoria": "livros", "valor": 200},
-    {"categoria": "eletrônicos", "valor": 800},
-    {"categoria": "livros", "valor": 100},
-    {"categoria": "joias", "valor": 2800},
-    {"categoria": "revistas", "valor": 50},
-    {"categoria": "joias", "valor": 2200},
-    {"categoria": "revistas", "valor": 50}
-]
+# vendas = [
+#     {"categoria": "eletrônicos", "valor": 1200},
+#     {"categoria": "livros", "valor": 200},
+#     {"categoria": "eletrônicos", "valor": 800},
+#     {"categoria": "livros", "valor": 100},
+#     {"categoria": "joias", "valor": 2800},
+#     {"categoria": "revistas", "valor": 50},
+#     {"categoria": "joias", "valor": 2200},
+#     {"categoria": "revistas", "valor": 50}
+# ]
 
-total_vendas = {}
+# total_vendas = {}
 
-for venda in vendas:
-    categoria = venda['categoria']
-    valor = venda['valor']
+# for venda in vendas:
+#     categoria = venda['categoria']
+#     valor = venda['valor']
 
-    if categoria in total_vendas:
-        total_vendas[categoria] += valor
-    else:
-        total_vendas[categoria] = valor
+#     if categoria in total_vendas:
+#         total_vendas[categoria] += valor
+#     else:
+#         total_vendas[categoria] = valor
 
-print(total_vendas)
-
-
+# print(total_vendas)
 
 
+# import time
+
+# print("Olá!!")
+# while True:
+#     print("Olá novamente!")
+#     time.sleep(5)
+
+''' EXERCICIO 11 - Leitura de Dados até Flag
+
+Objetivo: Ler dados de entrada até que uma palavra-chave específica ("sair") seja fornecida.
+
+'''
+
+dados = []
+entrada = ""
+
+while entrada != "sair":
+    entrada = input("Informe um dado, ou 'Sair' para finalizar: ").strip().lower()
+    if entrada != "sair":
+        dados.append(entrada)
+
+print(dados)
