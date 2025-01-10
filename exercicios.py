@@ -209,12 +209,26 @@ Objetivo: Ler dados de entrada até que uma palavra-chave específica ("sair") s
 
 '''
 
-dados = []
-entrada = ""
+# dados = []
+# entrada = ""
 
-while entrada != "sair":
-    entrada = input("Informe um dado, ou 'Sair' para finalizar: ").strip().lower()
-    if entrada != "sair":
-        dados.append(entrada)
+# while entrada != "sair":
+#     entrada = input("Informe um dado, ou 'Sair' para finalizar: ").strip().lower()
+#     if entrada != "sair":
+#         dados.append(entrada)
 
-print(dados)
+# print(dados)
+
+''' EXERCICIO 12 - Validação de Entrada
+
+Objetivo: Solicitar ao usuário um número dentro de um intervalo específico até que a entrada seja válida.
+
+'''
+numero_entrada = int(input("Informe um número: "))
+
+while numero_entrada >  10 or numero_entrada < 0:
+    print("Número fora do intervalo válido. Tente novamente.")
+    numero_entrada = int(input("Informe novamente um número: "))
+
+print("Parabéns, você acertou.")
+    
