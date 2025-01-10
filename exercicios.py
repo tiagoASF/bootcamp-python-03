@@ -254,14 +254,33 @@ Objetivo: Simular o consumo de uma API paginada, onde cada "página" de dados é
 Objetivo: Simular tentativas de reconexão a um serviço com um limite máximo de tentativas.
 
 '''
+# import time
+
+# tentativa = 1
+# LIMITE_TENTATIVAS = 10
+
+# while tentativa <= LIMITE_TENTATIVAS:
+#     print(f"Tentativa {tentativa}...")
+#     tentativa += 1
+#     time.sleep(2)
+
+# print("Máximo de tentativas atigido")
+
+''' EXERCICIO 15 - Processamento de Dados com Condição de Parada
+
+Objetivo: Processar itens de uma lista até encontrar um valor específico que indica a parada.
+
+'''
 import time
 
-tentativa = 1
-LIMITE_TENTATIVAS = 10
+itens = [1, 2, 3, "Playstation", 4, 5, "Parar", 10]
 
-while tentativa <= LIMITE_TENTATIVAS:
-    print(f"Tentativa {tentativa}...")
-    tentativa += 1
-    time.sleep(2)
-
-print("Máximo de tentativas atigido")
+i = 0
+while i < len(itens):
+    if itens[i] == "Parar":
+        print("Ponto de parada encontrado. Finalizando...")
+        break
+    else:
+        print(f"Processando item {i+1} de {len(itens)}")
+        time.sleep(1)
+        i +=1
